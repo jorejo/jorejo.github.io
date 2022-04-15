@@ -1,0 +1,189 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/social media.ttf');
+
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* General button style (reset) */
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+
+/* Pseudo elements for icons */
+.btn:before,
+.icon-heart:after,
+.icon-star:after,
+.icon-plus:after,
+.icon-file:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+.icon-snap:before {
+	content: "s";
+}
+.icon-insta:before {
+	content: "c";
+}
+
+/* Button 1 */
+.btn-1 {
+	background: #fcad26;
+	color: #fff;
+}
+
+.btn-1:hover {
+	background: #f29e0d;
+}
+
+.btn-1:active {
+	background: #f58500;
+	top: 2px;
+}
+
+.btn-1:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 1.5;
+	font-size: 300%;
+	width: 60px;
+}
+
+
+
+
+/* Button 1d */
+.btn-1d {
+	padding: 25px 60px 25px 120px;
+	border-radius: 20px;
+}
+
+.btn-1d:before {
+	background: #fff;
+	color: #fcad26;
+	z-index: 2;
+	border-radius: 20px 0 0 20px;
+}
+
+.btn-1d:after {
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	z-index: 1;
+	left: 55px;
+	top: 50%;
+	margin: -10px 0 0 -10px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.btn-1d:active:before {
+	color: #f58500;
+}
+
+.btn-1d:active {
+	top: 0;
+}
+
+.btn-1d:active:after {
+	left: 60px;
+}
+
+/* Button 2 */
+.btn-2 {
+	background: #7D0B95;
+	color: #fff;
+}
+
+.btn-2:hover {
+	background: #6D0A82;
+}
+
+.btn-2:active {
+	background: #f58500;
+	top: 2px;
+}
+
+.btn-2:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 1.5;
+	font-size: 300%;
+	width: 60px;
+}
+
+
+
+
+/* Button 2d */
+.btn-2d {
+	padding: 25px 60px 25px 120px;
+	border-radius: 20px;
+}
+
+.btn-2d:before {
+	background: #fff;
+	color: #7D0B95;
+	z-index: 2;
+	border-radius: 20px 0 0 20px;
+}
+
+.btn-2d:after {
+	width: 20px;
+	height: 20px;
+	background: #7D0B95;
+	z-index: 1;
+	left: 55px;
+	top: 50%;
+	margin: -10px 0 0 -10px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.btn-2d:active:before {
+	color: #f58500;
+}
+
+.btn-2d:active {
+	top: 0;
+}
+
+.btn-2d:active:after {
+	left: 60px;
+}
+
