@@ -2,7 +2,6 @@ let canvasEl = null;
 let ctx = null;
 let colorsEl = null;
 let selectedColor = null;
-var fs = require("fs");
 
 
 const init = () => {
