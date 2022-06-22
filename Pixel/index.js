@@ -1,7 +1,10 @@
 require("dotenv").config();
+fs = require('fs');
+
 
 const express = require("express");
 const bodyParser = require("body-parser");
+const { fstat } = require("fs");
 const app = express();
 
 const server = require("http").Server(app);
@@ -12,6 +15,8 @@ const port = process.env.PORT || 9999;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+var lastImg = 0;
+
 
 // Routes
 app.get("/", function (req, res) {
@@ -24,23 +29,21 @@ app.get("/status", function (req, res) {
 // Connexion Websocket
 io.on("connection", (socket) => {
   console.log(`Connected to client with Id ${socket.id}`);
+  
+  socket.on("Loaded", () =>{
+    console.log(`client ${socket.id} Loaded ! send ${lastImg}`);
+    socket.emit("s-picture", lastImg);
+  })
 
-  //   io.emit("element", "New element");
+  socket.on("c-picture", (obj) =>{
+    console.log("c-picture", obj);
+    lastImg = obj;
+    socket.emit("s-picture", lastImg);
+  })
 
-  //   io.on("command", (cmd) => {
-  //     console.log(`Recieved command ${cmd}`);
-  //     io.emit("element", "Add element");
-  //   });
-  socket.on("c-draw-pen", (obj /* color, penPoints */) => {
-    console.log("c-draw-pen", obj);
-    socket.broadcast.emit("s-draw-pen", obj);
-  });
-
-  setInterval(() => {
-    io.emit("s-blank-canvas");
-  }, 3 * 60 * 1000);
 });
 
+server.in
 // Start HTTP server
 server.listen(port, () => {
   console.log(`Server is listening on http://localhost:${port} !`);
