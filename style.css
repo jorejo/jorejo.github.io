@@ -2,7 +2,7 @@ body{
     background-color: blanchedalmond;
 }
 
-ul {
+.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@ ul {
   
   li a {
     display: block;
-    color: white;
+    color: rgb(0, 207, 104);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;

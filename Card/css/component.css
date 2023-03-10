@@ -1,7 +1,6 @@
 @font-face {
 	font-family: 'icomoon';
 	src:url('../fonts/social media.ttf');
-
 	font-weight: normal;
 	font-style: normal;
 }
@@ -35,7 +34,6 @@
 .icon-plus:after,
 .icon-file:before {
 	font-family: 'icomoon';
-	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
